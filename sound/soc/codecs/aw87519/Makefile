@@ -1,0 +1,3 @@
+
+obj-$(CONFIG_SND_SMARTPA_AW87519) += aw87519_audio.o
+

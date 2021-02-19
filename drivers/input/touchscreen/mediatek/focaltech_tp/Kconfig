@@ -1,0 +1,16 @@
+#
+# Touchscreen driver configuration
+#
+config TOUCHSCREEN_MTK_FOCALTECH_TP
+    bool "Focaltech Tp for Mediatek"
+    depends on I2C
+    default n
+    help
+      Say Y here if you have Focaltech touch panel.
+      If unsure, say N.
+      
+config TOUCHSCREEN_MTK_FTS_DIRECTORY
+    string "Focaltech tp directory name"
+    default "focaltech_tp"
+    depends on TOUCHSCREEN_MTK_FOCALTECH_TP
+    

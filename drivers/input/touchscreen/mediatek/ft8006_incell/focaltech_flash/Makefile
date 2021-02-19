@@ -1,0 +1,1 @@
+obj-$(CONFIG_TOUCHSCREEN_FT8006_INCELL) += focaltech_upgrade_ft8006s_ab.o

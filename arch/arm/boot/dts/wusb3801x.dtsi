@@ -1,0 +1,30 @@
+/* Copyright (c) 2017, The Linux Foundation. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 and
+ * only version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+
+/ {
+	wusb3801x: type_c_port0 {
+		compatible = "wusb3801x,type_c_port0";
+		wusb3801x,name = "type_c_port0";
+		reg = <0x60>;   
+		wusb3801,irq-gpio = <&pio 11 0x0>;
+		wusb3801,init-mode = <0x24>;
+		wusb3801,host-current = <0x01>;
+		wusb3801,drp-toggle-time = <40>;
+		wusb3801,role_def = <4>;
+		/* 0: SNK Only, 1: SRC Only, 2: DRP, 3: Try.SRC, 4: Try.SNK */
+		wusb3801,rp_level = <0>; /* 0: Default, 1: 1.5, 2: 3.0 */
+		wusb3801,notifier_supply_num = <2>;
+		/* the number of notifier supply */
+		status = "okay";
+	};
+};
+

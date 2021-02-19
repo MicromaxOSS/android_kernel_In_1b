@@ -1,0 +1,5 @@
+
+
+config SPROCOMM_WUSB3801
+	bool "SPROCOMM_WUSB3801"
+	default n

@@ -1,0 +1,3 @@
+
+obj-$(CONFIG_SND_SMARTPA_AW8898) += aw8898.o
+
